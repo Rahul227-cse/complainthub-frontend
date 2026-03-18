@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Home, FileText, List, Shield, Send, CheckCircle, Clock, AlertCircle } from 'lucide-react';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || '/api/complaints';
+const backendUrl = import.meta.env.VITE_API_URL || 'https://complainthub-backend-production.up.railway.app';
+const API_BASE_URL = backendUrl.endsWith('/api/complaints') ? backendUrl : `${backendUrl}/api/complaints`;
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState('dashboard');
