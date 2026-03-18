@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Home, FileText, List, Shield, Send, CheckCircle, Clock, AlertCircle } from 'lucide-react';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080/api/complaints';
+const API_BASE_URL = import.meta.env.VITE_API_URL || '/api/complaints';
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState('dashboard');
